@@ -1,10 +1,10 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.App{
+  font-family: 'Kanit';
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +35,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.search-column{
+  background-color: #677fba;
+  width: 30vw;
+  height: 600px;
+  margin-top: 10vh;
+  padding: 15px;
+  border-radius: 20px;
+}
+.search-column h2{
+  font-weight: 400;
+  font-style: normal;
+}
+.searchbar{
+  width: 28vw;
+  height: 6vh;
+  border: white;
+  border-radius: 5px;
+  font-family: 'Kanit';
+}
+.searchButton{
+  background-color: #BA677F!important;
+  border-color: #BA677F!important;
+}
+
+.checked .form-check-input[type="checkbox"] {
+  background-color: #BA677F;
+  border-color: #BA677F;
+  color: #fff;
+}
+
+.book-column{
+  background-color: #677fba;
+  width: 835px;
+  height: 600px;
+  margin-top: 10vh;
+  padding: 15px;
+  border-radius: 20px;
 }
