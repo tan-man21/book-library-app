@@ -55,6 +55,8 @@ function SearchColumn() {
         fetchData()
     }
 
+    // added this
+
     return (
         <div className='search-column'>
             <h2>Search</h2>
