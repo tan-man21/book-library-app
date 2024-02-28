@@ -38,7 +38,7 @@
 }
 
 .search-column{
-  background-color: #677fba;
+  background-color: #e2e2e2;
   width: 30vw;
   height: 600px;
   margin-top: 10vh;
@@ -56,22 +56,12 @@
   border-radius: 5px;
   font-family: 'Kanit';
 }
-.searchButton{
-  background-color: #BA677F!important;
-  border-color: #BA677F!important;
-}
-
-.checked .form-check-input[type="checkbox"] {
-  background-color: #BA677F;
-  border-color: #BA677F;
-  color: #fff;
-}
 
 .book-column{
-  background-color: #677fba;
-  width: 835px;
+  background-color: #DAE0E5;
+  width: 1235px;
   height: 600px;
-  margin-top: 10vh;
+  margin: 10vh auto;
   padding: 15px;
   border-radius: 20px;
 }
