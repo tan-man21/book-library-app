@@ -8,24 +8,13 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Logo from '../logo.svg';
 import axios from 'axios';
 import BookColumn from './BookColumn';
+import { useContext } from 'react';
+import { SearchContext } from '../context/SearchContext';
 
 function NavBar() {
-    const [searchTerm, setSearchTerm] = useState('')
+    // const [searchTerm, setSearchTerm] = useState('')
     const [books, setBooks] = useState([])
-
-    const handleSearch = async () => {
-      if(!searchTerm){
-        return;
-      }
-  
-      try{
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=AIzaSyC_6wmVPX88Nwmbxt2jboTLWQLcEbbUzq0`)
-        setBooks(response.data.items)
-        console.log(response.data.items)
-      } catch(error){
-        console.error(error);
-      }
-    }
+    const {term, handleSearch} = useContext(SearchContext)
 
     const expand = 'md'
 
@@ -51,20 +40,18 @@ function NavBar() {
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
-                    type="searc"
+                    type="text"
                     placeholder="Your Next Adventure Awaits..."
                     className="me-2"
                     aria-label="Search"
                     style={{width: '400px'}}
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    ref={term}
                   />
-                  <Button variant="outline-danger" type='submit' onClick={handleSearch}>Search</Button>
+                  <Button variant="outline-danger" type='submit' onClick={(e) => handleSearch(e, term.current.value)}>Search</Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
-          <BookColumn books={books} />
         </Navbar>
     )
 }
