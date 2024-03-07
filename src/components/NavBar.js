@@ -47,7 +47,7 @@ function NavBar() {
                     style={{width: '400px'}}
                     ref={term}
                   />
-                  <Button variant="outline-danger" type='submit' onClick={(e) => handleSearch(e, term.current.value)}>Search</Button>
+                  <Button variant='outline-danger' type='submit' onClick={(e) => handleSearch(e, term.current.value)} className='searchBtn'>Search</Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

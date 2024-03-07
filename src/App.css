@@ -61,7 +61,12 @@
   background-color: #DAE0E5;
   width: 1235px;
   height: 600px;
-  margin: 10vh auto;
+  margin: 2.5vh auto;
   padding: 15px;
   border-radius: 20px;
+}
+
+.cardBody{
+  animation: cardMove 1s;
+  
 }
